@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50,
@@ -39,7 +40,49 @@ class MyApp extends StatelessWidget {
                 fontSize: 20,
                 letterSpacing:  2.5,
                 fontWeight: FontWeight.bold
-              ),)
+              ),),
+              SizedBox(height: 20, width: 150,child: Divider(color: Colors.teal.shade100,),),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: ListTile(
+                    leading:  Icon(Icons.phone, color: Colors.teal,),
+                    title: Text('+22 783 389', style: TextStyle(
+                            color: Colors.teal.shade900,
+                            fontFamily: 'Source Sans Pro',
+                            fontSize: 20),
+                      ),
+                    )
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: ListTile(
+                    leading:  Icon(Icons.mail, color: Colors.teal,),
+                    title: Text('votheluc01@gmail.com', style: TextStyle(
+                        color: Colors.teal.shade900,
+                            fontFamily: 'Source Sans Pro',
+                            fontSize: 20),
+                      ),
+                    )
+                  // Row(
+                  //   children: [
+                  //     Icon(Icons.mail, color: Colors.teal,),
+                  //     SizedBox(width: 10,),
+                  //     Text('+22 783 389', style: TextStyle(
+                  //       color: Colors.teal.shade900,
+                  //       fontFamily: 'Source Sans Pro',
+                  //       fontSize: 20
+                  //     ),)
+                  //   ],
+                  // ),
+                ),
+              ),
             ],
           ),
         ),
